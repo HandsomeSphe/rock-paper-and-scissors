@@ -27,6 +27,10 @@ function win(user, comp) {
   results.innerHTML = `${convertWord(
     user
   )}${smallUserWord} beats  ${convertWord(comp)}${smallCompWord},you WIN`;
+  document.getElementById(user).classList.add("green-glow");
+  setTimeout(function () {
+    document.getElementById(user).classList.remove("green-glow");
+  }, 500);
 }
 function lose(user, comp) {
   computorScore++;
@@ -37,6 +41,10 @@ function lose(user, comp) {
   results.innerHTML = `${convertWord(
     user
   )}${smallUserWord} loses to  ${convertWord(comp)}${smallCompWord},you LOST`;
+  document.getElementById(user).classList.add("red-glow");
+  setTimeout(function () {
+    document.getElementById(user).classList.remove("red-glow");
+  }, 500);
 }
 function draw(user, comp) {
   //userScore++;
@@ -47,6 +55,10 @@ function draw(user, comp) {
   results.innerHTML = `${convertWord(
     user
   )}${smallUserWord} draws with ${convertWord(comp)}${smallCompWord},It a tie`;
+  document.getElementById(user).classList.add("gray-glow");
+  setTimeout(function () {
+    document.getElementById(user).classList.remove("gray-glow");
+  }, 500);
 }
 
 function game(userChoice) {
