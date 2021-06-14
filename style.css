@@ -70,7 +70,8 @@ header > h1 {
   transition: ease-in 0.4s;
 }
 .choice:hover {
-  background-color: #e2584d;
+  /*background-color: #e2584d;*/
+  background-color: lightgreen;
 }
 .choice > div {
   margin: 29px auto;
